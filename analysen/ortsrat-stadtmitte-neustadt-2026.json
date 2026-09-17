@@ -1,0 +1,292 @@
+{
+  "timestamp": "14.09.2026 00:55",
+  "reports": "16/18",
+  "seats": {
+    "SPD": 3,
+    "GRÜNE": 2,
+    "CDU": 2,
+    "Die Linke": 2,
+    "Die PARTEI": 1,
+    "FDP": 1
+  },
+  "parties": {
+    "SPD": {
+      "total": 3615,
+      "list": 2088,
+      "person": 1527,
+      "candidates": [
+        {
+          "name": "Dr. Tobias Eckardt",
+          "votes": 737,
+          "listpos": 1
+        },
+        {
+          "name": "Dagmar Hohls",
+          "votes": 309,
+          "listpos": 2
+        },
+        {
+          "name": "Carola Rex",
+          "votes": 226,
+          "listpos": 3
+        },
+        {
+          "name": "Lukas Keller",
+          "votes": 168,
+          "listpos": 4
+        },
+        {
+          "name": "Joshua Kreipe",
+          "votes": 87,
+          "listpos": 5
+        }
+      ]
+    },
+    "CDU": {
+      "total": 3011,
+      "list": 1792,
+      "person": 1219,
+      "candidates": [
+        {
+          "name": "Wolff-Rüdiger Kopper",
+          "votes": 364,
+          "listpos": 1
+        },
+        {
+          "name": "Katharina Schramm",
+          "votes": 302,
+          "listpos": 2
+        },
+        {
+          "name": "Renate Bettels",
+          "votes": 218,
+          "listpos": 3
+        },
+        {
+          "name": "Hans-Jürgen Bertsche",
+          "votes": 161,
+          "listpos": 4
+        },
+        {
+          "name": "Ilgin Arda Adigüzel",
+          "votes": 104,
+          "listpos": 5
+        },
+        {
+          "name": "Can Pugliese",
+          "votes": 70,
+          "listpos": 6
+        }
+      ]
+    },
+    "GRÜNE": {
+      "total": 3408,
+      "list": 2274,
+      "person": 1134,
+      "candidates": [
+        {
+          "name": "Isabel Thomas",
+          "votes": 317,
+          "listpos": 1
+        },
+        {
+          "name": "Jonas Freiwald",
+          "votes": 309,
+          "listpos": 2
+        },
+        {
+          "name": "Dr. Doris Wendt",
+          "votes": 249,
+          "listpos": 3
+        },
+        {
+          "name": "Magnus von Behren",
+          "votes": 114,
+          "listpos": 4
+        },
+        {
+          "name": "Philipp Heil",
+          "votes": 82,
+          "listpos": 5
+        },
+        {
+          "name": "Edeltraud Groenda-Meyer",
+          "votes": 63,
+          "listpos": 6
+        }
+      ]
+    },
+    "FDP": {
+      "total": 1008,
+      "list": 566,
+      "person": 442,
+      "candidates": [
+        {
+          "name": "Dr. Henrik Jacobs",
+          "votes": 207,
+          "listpos": 1
+        },
+        {
+          "name": "Dr. Christian Vogel",
+          "votes": 112,
+          "listpos": 2
+        },
+        {
+          "name": "Tim Heckeroth",
+          "votes": 50,
+          "listpos": 3
+        },
+        {
+          "name": "Andre Hermenau",
+          "votes": 49,
+          "listpos": 4
+        },
+        {
+          "name": "Ahmad Ossman",
+          "votes": 24,
+          "listpos": 5
+        }
+      ]
+    },
+    "Die Linke": {
+      "total": 2860,
+      "list": 2216,
+      "person": 644,
+      "candidates": [
+        {
+          "name": "Marcel Hartmann",
+          "votes": 305,
+          "listpos": 1
+        },
+        {
+          "name": "Johannes Adam",
+          "votes": 221,
+          "listpos": 2
+        },
+        {
+          "name": "David Nils Bittersohl",
+          "votes": 118,
+          "listpos": 3
+        }
+      ]
+    },
+    "Die PARTEI": {
+      "total": 707,
+      "list": 471,
+      "person": 236,
+      "candidates": [
+        {
+          "name": "Hamun Hirbod",
+          "votes": 164,
+          "listpos": 1
+        },
+        {
+          "name": "Cornelia Pianko",
+          "votes": 34,
+          "listpos": 2
+        },
+        {
+          "name": "Niels Olaf Persson",
+          "votes": 27,
+          "listpos": 3
+        },
+        {
+          "name": "Martin Pianko",
+          "votes": 11,
+          "listpos": 4
+        }
+      ]
+    },
+    "Volt": {
+      "total": 563,
+      "list": 362,
+      "person": 201,
+      "candidates": [
+        {
+          "name": "Fabian Kuper",
+          "votes": 201,
+          "listpos": 1
+        }
+      ]
+    }
+  },
+  "winners": [
+    {
+      "name": "Dr. Tobias Eckardt",
+      "votes": 737,
+      "listpos": 1,
+      "party": "SPD",
+      "mandate": "Personenwahl"
+    },
+    {
+      "name": "Dagmar Hohls",
+      "votes": 309,
+      "listpos": 2,
+      "party": "SPD",
+      "mandate": "Listenplatz 2"
+    },
+    {
+      "name": "Carola Rex",
+      "votes": 226,
+      "listpos": 3,
+      "party": "SPD",
+      "mandate": "Listenplatz 3"
+    },
+    {
+      "name": "Isabel Thomas",
+      "votes": 317,
+      "listpos": 1,
+      "party": "GRÜNE",
+      "mandate": "Personenwahl"
+    },
+    {
+      "name": "Jonas Freiwald",
+      "votes": 309,
+      "listpos": 2,
+      "party": "GRÜNE",
+      "mandate": "Listenplatz 2"
+    },
+    {
+      "name": "Wolff-Rüdiger Kopper",
+      "votes": 364,
+      "listpos": 1,
+      "party": "CDU",
+      "mandate": "Personenwahl"
+    },
+    {
+      "name": "Katharina Schramm",
+      "votes": 302,
+      "listpos": 2,
+      "party": "CDU",
+      "mandate": "Listenplatz 2"
+    },
+    {
+      "name": "Marcel Hartmann",
+      "votes": 305,
+      "listpos": 1,
+      "party": "Die Linke",
+      "mandate": "Listenplatz 1"
+    },
+    {
+      "name": "Johannes Adam",
+      "votes": 221,
+      "listpos": 2,
+      "party": "Die Linke",
+      "mandate": "Listenplatz 2"
+    },
+    {
+      "name": "Hamun Hirbod",
+      "votes": 164,
+      "listpos": 1,
+      "party": "Die PARTEI",
+      "mandate": "Listenplatz 1"
+    },
+    {
+      "name": "Dr. Henrik Jacobs",
+      "votes": 207,
+      "listpos": 1,
+      "party": "FDP",
+      "mandate": "Listenplatz 1"
+    }
+  ]
+}

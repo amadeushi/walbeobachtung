@@ -1,0 +1,54 @@
+{
+  "year": "2016",
+  "wahl": "Kreistagswahl",
+  "metadata": {
+    "csvs": [],
+    "dateifelder": [
+      {
+        "name": "Kreistagswahl",
+        "parteien": [
+          {
+            "feld": "D1",
+            "wert": "Christlich Demokratische Union Deutschlands in Niedersachsen"
+          },
+          { "feld": "D2", "wert": "Sozialdemokratische Partei Deutschlands" },
+          { "feld": "D3", "wert": "BÜNDNIS 90/DIE GRÜNEN" },
+          { "feld": "D4", "wert": "Freie Demokratische Partei" },
+          { "feld": "D5", "wert": "DIE LINKE. Niedersachsen" },
+          { "feld": "D6", "wert": "Alternative für Deutschland" },
+          { "feld": "D7", "wert": "Wählergruppen" },
+          { "feld": "D8", "wert": "Einzelbewerbende" }
+        ]
+      }
+    ]
+  },
+  "rows": [],
+  "total": {
+    "gebiet-name": "Landkreis Hildesheim",
+    "A": "228467",
+    "B": "131706",
+    "C2": "129432",
+    "D": "379247",
+    "max-schnellmeldungen": "1",
+    "anz-schnellmeldungen": "1",
+    "D1": "124159",
+    "D2": "135479",
+    "D3": "38767",
+    "D4": "11305",
+    "D5": "10818",
+    "D6": "35468",
+    "D7": "23114",
+    "D8": "137"
+  },
+  "level": "Landkreis",
+  "areaLevel": "landkreis",
+  "sources": [
+    "https://wahlen.statistik.niedersachsen.de/KW2016/kreiswahlergebnis.csv"
+  ],
+  "retrieved": "08.09.2026",
+  "archived": true,
+  "resultStatus": "Amtliches Kreisergebnis 2016",
+  "absentParties": ["Die PARTEI"],
+  "splitAvailable": false,
+  "warning": "Für 2016 ist in der Landesstatistik das vollständige Kreisergebnis verfügbar, aber keine vergleichbare Aufschlüsselung nach Gemeinden oder Kreiswahlbereichen."
+}

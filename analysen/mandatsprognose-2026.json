@@ -1,0 +1,1791 @@
+{
+  "stadtrat": {
+    "kind": "stadtrat",
+    "status": [
+      "Alle Schnellmeldungen eingegangen!",
+      "125 von 125 Ergebnissen"
+    ],
+    "seats": {
+      "SPD": 10,
+      "GRÜNE": 9,
+      "AfD": 6,
+      "CDU": 10,
+      "Die Linke": 4,
+      "Die PARTEI": 1,
+      "Gemeinsam Plus": 1,
+      "Interkulturelle Liga": 1,
+      "Volt": 1,
+      "FDP": 1
+    },
+    "winners": [
+      {
+        "name": "Dr. Tobias Eckardt",
+        "votes": 825,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "F",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Timo Biedermann",
+        "votes": 807,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "F",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Carola Rex",
+        "votes": 366,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "G",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Marcus Krettek",
+        "votes": 318,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "G",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Beate König",
+        "votes": 1148,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Nicole Reuß",
+        "votes": 525,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "H",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Tim Bellgardt",
+        "votes": 416,
+        "listpos": 3,
+        "party": "SPD",
+        "area": "H",
+        "mandate": "Listenplatz 3"
+      },
+      {
+        "name": "Erhard Paasch",
+        "votes": 2677,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Stephan Lenz",
+        "votes": 984,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Rita Weber",
+        "votes": 427,
+        "listpos": 3,
+        "party": "SPD",
+        "area": "I",
+        "mandate": "Listenplatz 3"
+      },
+      {
+        "name": "Carola Farih",
+        "votes": 395,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "F",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Jonas Freiwald",
+        "votes": 332,
+        "listpos": 2,
+        "party": "GRÜNE",
+        "area": "F",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Uwe Adling",
+        "votes": 617,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "G",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Anne Friederike Seefels",
+        "votes": 411,
+        "listpos": 2,
+        "party": "GRÜNE",
+        "area": "G",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Leonie Busse",
+        "votes": 836,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Volker Spieth",
+        "votes": 407,
+        "listpos": 2,
+        "party": "GRÜNE",
+        "area": "H",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Sira Möller",
+        "votes": 343,
+        "listpos": 3,
+        "party": "GRÜNE",
+        "area": "H",
+        "mandate": "Listenplatz 3"
+      },
+      {
+        "name": "Tinka Dittrich",
+        "votes": 1149,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Thomas Kittel",
+        "votes": 369,
+        "listpos": 2,
+        "party": "GRÜNE",
+        "area": "I",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Gerrit Lopau",
+        "votes": 327,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Sascha Kromberg",
+        "votes": 768,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Ralf Kriesinger",
+        "votes": 1003,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Felix Britten",
+        "votes": 546,
+        "listpos": 2,
+        "party": "AfD",
+        "area": "H",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Michael Körber",
+        "votes": 946,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Stefan Quensen",
+        "votes": 629,
+        "listpos": 2,
+        "party": "AfD",
+        "area": "I",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Dag Störmer",
+        "votes": 320,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Dennis Münter",
+        "votes": 846,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "G",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Thomas Giesa",
+        "votes": 641,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "G",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Frank Wodsack",
+        "votes": 1545,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Enzo Calvanico",
+        "votes": 1244,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Hans-Uwe Bringmann",
+        "votes": 653,
+        "listpos": 3,
+        "party": "CDU",
+        "area": "H",
+        "mandate": "Listenplatz 3"
+      },
+      {
+        "name": "Carsten Schiedeck",
+        "votes": 604,
+        "listpos": 4,
+        "party": "CDU",
+        "area": "H",
+        "mandate": "Listenplatz 4"
+      },
+      {
+        "name": "Martin Eggers",
+        "votes": 1227,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Thomas Brandes",
+        "votes": 1202,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Michael Bosse-Arbogast",
+        "votes": 885,
+        "listpos": 3,
+        "party": "CDU",
+        "area": "I",
+        "mandate": "Listenplatz 3"
+      },
+      {
+        "name": "Jonathan Weldeab",
+        "votes": 297,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Anna Jacob",
+        "votes": 353,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Lana Jasmine Ludolphy",
+        "votes": 355,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Ferry Marquardt",
+        "votes": 354,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Ortwin Bönhold",
+        "votes": 145,
+        "listpos": 1,
+        "party": "Die PARTEI",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Dirk Bettels",
+        "votes": 702,
+        "listpos": 1,
+        "party": "Gemeinsam Plus",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Dr. Dr. Enver Sopjani",
+        "votes": 802,
+        "listpos": 1,
+        "party": "Interkulturelle Liga",
+        "area": "F",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Jens Schulte-Koch",
+        "votes": 341,
+        "listpos": 1,
+        "party": "Volt",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Claas Ebert",
+        "votes": 423,
+        "listpos": 1,
+        "party": "FDP",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      }
+    ],
+    "allocations": {
+      "SPD": {
+        "overall": 10,
+        "areas": {
+          "F": 2,
+          "G": 2,
+          "H": 3,
+          "I": 3
+        },
+        "detail": {
+          "F": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 5546
+          },
+          "G": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 5235
+          },
+          "H": {
+            "seats": 3,
+            "split": {
+              "list": 2,
+              "person": 1
+            },
+            "total": 8639
+          },
+          "I": {
+            "seats": 3,
+            "split": {
+              "list": 1,
+              "person": 2
+            },
+            "total": 11295
+          }
+        }
+      },
+      "GRÜNE": {
+        "overall": 9,
+        "areas": {
+          "F": 2,
+          "G": 2,
+          "H": 3,
+          "I": 2
+        },
+        "detail": {
+          "F": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 4844
+          },
+          "G": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 4953
+          },
+          "H": {
+            "seats": 3,
+            "split": {
+              "list": 2,
+              "person": 1
+            },
+            "total": 9639
+          },
+          "I": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 7576
+          }
+        }
+      },
+      "AfD": {
+        "overall": 6,
+        "areas": {
+          "F": 1,
+          "G": 1,
+          "H": 2,
+          "I": 2
+        },
+        "detail": {
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3196
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4397
+          },
+          "H": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 5086
+          },
+          "I": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 5563
+          }
+        }
+      },
+      "CDU": {
+        "overall": 10,
+        "areas": {
+          "F": 1,
+          "G": 2,
+          "H": 4,
+          "I": 3
+        },
+        "detail": {
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3808
+          },
+          "G": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 4786
+          },
+          "H": {
+            "seats": 4,
+            "split": {
+              "list": 2,
+              "person": 2
+            },
+            "total": 10134
+          },
+          "I": {
+            "seats": 3,
+            "split": {
+              "list": 1,
+              "person": 2
+            },
+            "total": 9741
+          }
+        }
+      },
+      "Die Linke": {
+        "overall": 4,
+        "areas": {
+          "F": 1,
+          "G": 1,
+          "H": 1,
+          "I": 1
+        },
+        "detail": {
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4009
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3754
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 2465
+          },
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 2832
+          }
+        }
+      },
+      "Die PARTEI": {
+        "overall": 1,
+        "areas": {
+          "F": 0,
+          "G": 0,
+          "H": 1,
+          "I": 0
+        },
+        "detail": {
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 595
+          }
+        }
+      },
+      "Gemeinsam Plus": {
+        "overall": 1,
+        "areas": {
+          "F": 0,
+          "G": 0,
+          "H": 1,
+          "I": 0
+        },
+        "detail": {
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 1084
+          }
+        }
+      },
+      "Interkulturelle Liga": {
+        "overall": 1,
+        "areas": {
+          "F": 1,
+          "G": 0,
+          "H": 0,
+          "I": 0
+        },
+        "detail": {
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 872
+          }
+        }
+      },
+      "Volt": {
+        "overall": 1,
+        "areas": {
+          "F": 0,
+          "G": 0,
+          "H": 0,
+          "I": 1
+        },
+        "detail": {
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 896
+          }
+        }
+      },
+      "FDP": {
+        "overall": 1,
+        "areas": {
+          "F": 0,
+          "G": 0,
+          "H": 1,
+          "I": 0
+        },
+        "detail": {
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 1086
+          }
+        }
+      }
+    },
+    "timestamp": "14.09.2026 01:00"
+  },
+  "kreistag": {
+    "kind": "kreistag",
+    "status": [
+      "429 von 431 Ergebnissen"
+    ],
+    "seats": {
+      "SPD": 18,
+      "GRÜNE": 9,
+      "AfD": 11,
+      "CDU": 16,
+      "Die Linke": 4,
+      "Die PARTEI": 1,
+      "Die Unabhängigen": 2,
+      "Volt": 1,
+      "FDP": 2
+    },
+    "winners": [
+      {
+        "name": "Lars Zeugner",
+        "votes": 1545,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "A",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Christel Brede",
+        "votes": 1232,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "A",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Andreas Arlt",
+        "votes": 2460,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "B",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Annika Wehr",
+        "votes": 2166,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "B",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Thomas Mensing",
+        "votes": 3062,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "C",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Marek Fink",
+        "votes": 1276,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "C",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Bernd Beushausen",
+        "votes": 1799,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "D",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Waltraud Friedemann",
+        "votes": 1731,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "D",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Henning Hesse",
+        "votes": 2018,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "E",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Kai Schwetje",
+        "votes": 1418,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "E",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Ulrike Dammann",
+        "votes": 709,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Friederike Bültemann",
+        "votes": 384,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Dr. John Coughlan",
+        "votes": 899,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Pascal Kubat",
+        "votes": 1377,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Simone Flohr",
+        "votes": 2406,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "K",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Karl-Heinz Hodur",
+        "votes": 972,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "K",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Marc Ehrig",
+        "votes": 3082,
+        "listpos": 1,
+        "party": "SPD",
+        "area": "L",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Thorsten Bertram",
+        "votes": 975,
+        "listpos": 2,
+        "party": "SPD",
+        "area": "L",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Matthias Brinkmann",
+        "votes": 1374,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "A",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Dr. Holger Schütte",
+        "votes": 653,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "C",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Nadine Fischbock",
+        "votes": 884,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "D",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Karin Bunk",
+        "votes": 391,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "E",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Ekkehard Domning",
+        "votes": 435,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Elske Gödeke",
+        "votes": 483,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Eske Domning",
+        "votes": 708,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Stefan Kolan",
+        "votes": 877,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Cathrin Stangl",
+        "votes": 898,
+        "listpos": 1,
+        "party": "GRÜNE",
+        "area": "L",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Hans Martin Meyer",
+        "votes": 1258,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "A",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Eva-Maria Althaus",
+        "votes": 1139,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "B",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Sabrina Grünheid",
+        "votes": 1376,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "C",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Waldemar Weber",
+        "votes": 1318,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "D",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Sven Hauck",
+        "votes": 1225,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "E",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Sascha Kromberg",
+        "votes": 615,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Ralf Kriesinger",
+        "votes": 852,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Michael Körber",
+        "votes": 995,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Felix Mull",
+        "votes": 3535,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "K",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "David Schmalstieg",
+        "votes": 747,
+        "listpos": 2,
+        "party": "AfD",
+        "area": "K",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Norbert Hüter",
+        "votes": 1385,
+        "listpos": 1,
+        "party": "AfD",
+        "area": "L",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Clemens Gerhardy",
+        "votes": 1527,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "A",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Paul Linkogel",
+        "votes": 845,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "A",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Albert Wille",
+        "votes": 1124,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "B",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Ulrich Schünemann",
+        "votes": 2293,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "C",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Christian Voit",
+        "votes": 1432,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "D",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Justus Lüder",
+        "votes": 2525,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "E",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Andreas Koschorrek",
+        "votes": 764,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "E",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Tom Kruse",
+        "votes": 356,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Thomas Giesa",
+        "votes": 693,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "G",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Vincenzo Calvanico",
+        "votes": 1211,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "H",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Ramon Herbst",
+        "votes": 1031,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "I",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Michael Bosse-Arbogast",
+        "votes": 948,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "I",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Dr. Thomas Bruns",
+        "votes": 2069,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "K",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Katharina Spengler",
+        "votes": 2044,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "K",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Heinrich Machtens",
+        "votes": 2229,
+        "listpos": 1,
+        "party": "CDU",
+        "area": "L",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Alena Aselmeyer",
+        "votes": 1594,
+        "listpos": 2,
+        "party": "CDU",
+        "area": "L",
+        "mandate": "Listenplatz 2"
+      },
+      {
+        "name": "Anna-Lena Stein",
+        "votes": 723,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "F",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Emma Brandes",
+        "votes": 748,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "G",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Johanna Quack",
+        "votes": 422,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "H",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Daniel Kindler",
+        "votes": 449,
+        "listpos": 1,
+        "party": "Die Linke",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Sarah Isabel Hüsgen",
+        "votes": 233,
+        "listpos": 1,
+        "party": "Die PARTEI",
+        "area": "L",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Oliver Riechelmann",
+        "votes": 848,
+        "listpos": 1,
+        "party": "Die Unabhängigen",
+        "area": "B",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Josef Stuke",
+        "votes": 1088,
+        "listpos": 1,
+        "party": "Die Unabhängigen",
+        "area": "L",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Dr. Martin Gottschlich",
+        "votes": 406,
+        "listpos": 1,
+        "party": "Volt",
+        "area": "I",
+        "mandate": "Listenplatz 1"
+      },
+      {
+        "name": "Felix Hennecke",
+        "votes": 635,
+        "listpos": 1,
+        "party": "FDP",
+        "area": "D",
+        "mandate": "Personenwahl"
+      },
+      {
+        "name": "Finn Peters",
+        "votes": 356,
+        "listpos": 1,
+        "party": "FDP",
+        "area": "E",
+        "mandate": "Personenwahl"
+      }
+    ],
+    "allocations": {
+      "SPD": {
+        "overall": 18,
+        "areas": {
+          "A": 2,
+          "B": 2,
+          "C": 2,
+          "D": 2,
+          "E": 2,
+          "F": 1,
+          "G": 1,
+          "H": 1,
+          "I": 1,
+          "K": 2,
+          "L": 2
+        },
+        "detail": {
+          "A": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 12555
+          },
+          "B": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 11402
+          },
+          "C": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 13591
+          },
+          "D": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 11150
+          },
+          "E": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 13624
+          },
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4906
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 5520
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 8586
+          },
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 9922
+          },
+          "K": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 11350
+          },
+          "L": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 11275
+          }
+        }
+      },
+      "GRÜNE": {
+        "overall": 9,
+        "areas": {
+          "A": 1,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 1,
+          "G": 1,
+          "H": 1,
+          "I": 1,
+          "K": 0,
+          "L": 1
+        },
+        "detail": {
+          "A": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 6473
+          },
+          "C": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3884
+          },
+          "D": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4575
+          },
+          "E": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4587
+          },
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4863
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 5210
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 9035
+          },
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 7695
+          },
+          "L": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 5356
+          }
+        }
+      },
+      "AfD": {
+        "overall": 11,
+        "areas": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 0,
+          "G": 1,
+          "H": 1,
+          "I": 1,
+          "K": 2,
+          "L": 1
+        },
+        "detail": {
+          "A": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 7918
+          },
+          "B": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 6522
+          },
+          "C": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 8183
+          },
+          "D": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 6856
+          },
+          "E": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 7255
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 4429
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 5085
+          },
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 5569
+          },
+          "K": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 10223
+          },
+          "L": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 8006
+          }
+        }
+      },
+      "CDU": {
+        "overall": 16,
+        "areas": {
+          "A": 2,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 2,
+          "F": 1,
+          "G": 1,
+          "H": 1,
+          "I": 2,
+          "K": 2,
+          "L": 2
+        },
+        "detail": {
+          "A": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 10046
+          },
+          "B": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 7638
+          },
+          "C": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 9029
+          },
+          "D": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 7804
+          },
+          "E": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 10962
+          },
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3597
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 4865
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 9612
+          },
+          "I": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 10062
+          },
+          "K": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 13166
+          },
+          "L": {
+            "seats": 2,
+            "split": {
+              "list": 1,
+              "person": 1
+            },
+            "total": 13630
+          }
+        }
+      },
+      "Die Linke": {
+        "overall": 4,
+        "areas": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 1,
+          "G": 1,
+          "H": 1,
+          "I": 1,
+          "K": 0,
+          "L": 0
+        },
+        "detail": {
+          "F": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3942
+          },
+          "G": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 3324
+          },
+          "H": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 2969
+          },
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 2622
+          }
+        }
+      },
+      "Die PARTEI": {
+        "overall": 1,
+        "areas": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 0,
+          "H": 0,
+          "I": 0,
+          "K": 0,
+          "L": 1
+        },
+        "detail": {
+          "L": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 638
+          }
+        }
+      },
+      "Die Unabhängigen": {
+        "overall": 2,
+        "areas": {
+          "A": 0,
+          "B": 1,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 0,
+          "H": 0,
+          "I": 0,
+          "K": 0,
+          "L": 1
+        },
+        "detail": {
+          "B": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 2452
+          },
+          "L": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 2891
+          }
+        }
+      },
+      "Volt": {
+        "overall": 1,
+        "areas": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 0,
+          "H": 0,
+          "I": 1,
+          "K": 0,
+          "L": 0
+        },
+        "detail": {
+          "I": {
+            "seats": 1,
+            "split": {
+              "list": 1,
+              "person": 0
+            },
+            "total": 1030
+          }
+        }
+      },
+      "FDP": {
+        "overall": 2,
+        "areas": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "E": 1,
+          "F": 0,
+          "G": 0,
+          "H": 0,
+          "I": 0,
+          "K": 0,
+          "L": 0
+        },
+        "detail": {
+          "D": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 1697
+          },
+          "E": {
+            "seats": 1,
+            "split": {
+              "list": 0,
+              "person": 1
+            },
+            "total": 1351
+          }
+        }
+      }
+    }
+  }
+}
