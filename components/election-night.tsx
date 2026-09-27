@@ -55,11 +55,16 @@ const partyShare = (election: ElectionResult, party: string) => {
 
 function tickerChanges(previous: ElectionNightData | undefined, current: ElectionNightData, party: string) {
   if (!previous) {
+    const runoff = current.elections.find((election) => election.key === 'landrat-stichwahl');
     const reports = current.elections.reduce((sum, election) => sum + election.reports, 0);
     const maxReports = current.elections.reduce((sum, election) => sum + election.maxReports, 0);
     return [{
       id: `stand-${current.retrieved}`,
-      text: reports
+      text: runoff
+        ? runoff.reports
+          ? `Stichwahl zum Landrat: ${number.format(runoff.reports)} von ${number.format(runoff.maxReports)} Schnellmeldungen eingegangen`
+          : `Stichwahl zum Landrat: Auszählung ab 18 Uhr · ${number.format(runoff.maxReports)} Schnellmeldungen erwartet`
+        : reports
         ? `Aktueller Stand: ${number.format(reports)} von ${number.format(maxReports)} Schnellmeldungen eingegangen`
         : `${current.elections.length} Wahlen werden automatisch auf neue Schnellmeldungen geprüft`,
       tone: 'news' as const,
@@ -205,6 +210,41 @@ function ResultCard({
   );
 }
 
+function RunoffSpotlight({ election }: { election: ElectionResult }) {
+  const ranking = [...election.parties].sort((a, b) => b.votes - a.votes);
+  const started = election.valid > 0 || election.reports > 0;
+  const reporting = election.maxReports
+    ? Math.min(100, (election.reports / election.maxReports) * 100)
+    : 0;
+  return (
+    <article className="runoff-spotlight">
+      <div className="runoff-title">
+        <div>
+          <span><Radio /> HEUTE · 27. SEPTEMBER 2026</span>
+          <h3>Stichwahl zum Landrat</h3>
+          <p>Landkreis Hildesheim · amtliche Schnellmeldungen</p>
+        </div>
+        <strong>{election.reports}/{election.maxReports || '–'} <small>Meldungen</small></strong>
+      </div>
+      <div className="runoff-candidates">
+        {ranking.map((candidate) => {
+          const share = election.valid ? (candidate.votes / election.valid) * 100 : 0;
+          const theme = partyColors(candidate.name);
+          return (
+            <div key={candidate.id} style={{ '--candidate-color': theme.background } as CSSProperties}>
+              <span>{candidate.name}</span>
+              <b>{candidate.candidate || candidate.full}</b>
+              <strong>{started ? `${percent.format(share)} %` : '—'}</strong>
+              <small>{started ? `${number.format(candidate.votes)} Stimmen` : 'Auszählung ab 18 Uhr'}</small>
+            </div>
+          );
+        })}
+      </div>
+      <div className="runoff-progress"><i style={{ width: `${reporting}%` }} /></div>
+    </article>
+  );
+}
+
 export default function ElectionNight({ refresh, party, onPartyChange }: { refresh: number; party: string; onPartyChange: (party: string) => void }) {
   const [data, setData] = useState<ElectionNightData>();
   const [error, setError] = useState('');
@@ -288,6 +328,7 @@ export default function ElectionNight({ refresh, party, onPartyChange }: { refre
   const parties = useMemo(() => data?.parties ?? ['Die PARTEI'], [data]);
   const hasParty = (election: ElectionResult) =>
     election.parties.some((candidate) => normalized(candidate.name) === normalized(party));
+  const runoff = data?.elections.find((election) => election.key === 'landrat-stichwahl');
   const main = (data?.elections.filter((election) => ['stadtrat', 'kreistag'].includes(election.key)) ?? []).filter(hasParty);
   const landrat = data?.elections.find((election) => election.key === 'landrat' && hasParty(election));
   const local = (data?.elections.filter((election) => election.scope === 'Ortsrat') ?? []).filter((election) =>
@@ -344,7 +385,7 @@ export default function ElectionNight({ refresh, party, onPartyChange }: { refre
         <div>
           <div className="eyebrow"><Radio /> Wahlabend 2026 · Liveübersicht</div>
           <h2>Alle Wahlen für <em>{party}</em></h2>
-          <p>Stadtrat, Kreistag, Landratswahl und Ortsräte mit Kandidatur</p>
+          <p>Stichwahl, Stadtrat, Kreistag, Landratswahl und Ortsräte</p>
         </div>
         <div className="night-controls">
           <label>PARTEI IM FOKUS</label>
@@ -354,10 +395,11 @@ export default function ElectionNight({ refresh, party, onPartyChange }: { refre
               {parties.map((name) => <SelectItem key={name} value={name}>{name}</SelectItem>)}
             </SelectContent>
           </Select>
-          <small>{loading ? 'Aktualisierung läuft …' : `${reports}/${maxReports || '–'} Schnellmeldungen · ${data.retrieved}`}</small>
+          <small>{loading ? 'Aktualisierung läuft …' : runoff ? `${runoff.reports}/${runoff.maxReports || '–'} Stichwahl-Meldungen · ${data.retrieved}` : `${reports}/${maxReports || '–'} Schnellmeldungen · ${data.retrieved}`}</small>
         </div>
       </div>
       {(error || data.warning) && <div className="night-warning">{error ? `Letzter Datenstand wird gezeigt · ${error}` : data.warning}</div>}
+      {runoff && <RunoffSpotlight election={runoff} />}
       {main.length ? (
         <>
           <div className="night-section-label">Stadt- und Kreisebene · {main.length === 2 ? '2 Kandidaturen' : '1 Kandidatur'}</div>
@@ -368,7 +410,7 @@ export default function ElectionNight({ refresh, party, onPartyChange }: { refre
       ) : (
         <div className="night-no-main">Keine Kandidatur für Stadtrat oder Kreistag</div>
       )}
-      <div className="night-section-label">
+      <div className="night-section-label night-lower-label">
         Direkt- und Ortsratswahlen · {lowerCount === 1 ? '1 sichtbare Wahl' : `${lowerCount} sichtbare Wahlen`}
       </div>
       {lowerCount ? (

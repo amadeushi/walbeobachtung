@@ -13,9 +13,16 @@ $wahlabendCache = __DIR__.'/../data/wahlabend-last.json';
 $wahlabendLock = __DIR__.'/../data/wahlabend-refresh.lock';
 $loadLiveMeta = static function (string $authority) use ($fetchJson): array {
   $local = __DIR__.'/../data/'.($authority === '03254000' ? 'live-meta-county.json' : 'live-meta-city.json');
+  try {
+    $data = $fetchJson("http://wahlen.kreis-hi.de/wahlen/20260913/$authority/daten/opendata/open_data.json");
+    if (!empty($data['csvs']) && !empty($data['dateifelder'])) {
+      @file_put_contents($local, json_encode($data, JSON_UNESCAPED_UNICODE), LOCK_EX);
+      return $data;
+    }
+  } catch (Throwable $e) {}
   $data = json_decode((string)@file_get_contents($local), true);
   if (is_array($data) && !empty($data['csvs']) && !empty($data['dateifelder'])) return $data;
-  return $fetchJson("http://wahlen.kreis-hi.de/wahlen/20260913/$authority/daten/opendata/open_data.json");
+  throw new RuntimeException('Live-Metadaten nicht erreichbar');
 };
 if ($action === 'personen' && in_array($year, ['2016', '2021', '2026'], true) && ($wahl === 'Stadtratswahl' || str_starts_with($wahl, 'Ortsratswahl ('))) {
   try {
@@ -68,7 +75,7 @@ if ($action === 'personen' && in_array($year, ['2016', '2021', '2026'], true) &&
     echo json_encode(['people'=>array_slice($people,0,10),'scope'=>$scope,'source'=>"http://wahlen.kreis-hi.de/wahlen/$date/03254021/praesentation/ergebnisgrafik.html?wahl_id=$electionId&stimmentyp=0&id=$areaId"], JSON_UNESCAPED_UNICODE); exit;
   } catch (Throwable $e) { http_response_code(502); echo json_encode(['error'=>'Personenstimmen nicht verfügbar']); exit; }
 }
-if (!in_array($year, ['2011', '2016', '2021', '2026'], true) || (!in_array($wahl, ['Stadtratswahl', 'Kreiswahl', 'Kreistagswahl', 'Bürgermeisterwahl', 'Landratswahl'], true) && !str_starts_with($wahl, 'Ortsratswahl ('))) {
+if (!in_array($year, ['2011', '2016', '2021', '2026'], true) || (!in_array($wahl, ['Stadtratswahl', 'Kreiswahl', 'Kreistagswahl', 'Bürgermeisterwahl', 'Landratswahl', 'Stichwahl des Landrats'], true) && !str_starts_with($wahl, 'Ortsratswahl ('))) {
   http_response_code(400); echo json_encode(['error' => 'Ungültige Auswahl']); exit;
 }
 $root = dirname(__DIR__);
@@ -118,6 +125,7 @@ try {
     foreach ($localNames as [$displayName,$officialName]) $definitions[] = ['key'=>'ortsrat-'.$localKeys[$displayName],'name'=>$displayName,'scope'=>'Ortsrat','actual'=>'Ortsratswahl '.$officialName,'meta'=>$cityMeta,'base'=>$cityBase,'level'=>'ortschaft'];
     array_splice($definitions, 1, 0, [[ 'key'=>'kreistag','name'=>'Kreistag','scope'=>'Landkreis Hildesheim','actual'=>'Kreistagswahl','meta'=>$countyMeta,'base'=>$countyBase,'level'=>'gesamtergebnis' ]]);
     array_splice($definitions, 2, 0, [[ 'key'=>'landrat','name'=>'Landratswahl','scope'=>'Landkreis · Direktwahl','actual'=>'Landratswahl','meta'=>$countyMeta,'base'=>$countyBase,'level'=>'gesamtergebnis','candidates'=>['SPD'=>'Bernd Lynack','CDU'=>'Christopher Gedeon','GRÜNE'=>'Matthias Brinkmann'] ]]);
+    array_splice($definitions, 0, 0, [[ 'key'=>'landrat-stichwahl','name'=>'Stichwahl zum Landrat','scope'=>'Landkreis Hildesheim · 27. September','actual'=>'Stichwahl des Landrats','meta'=>$countyMeta,'base'=>$countyBase,'level'=>'gesamtergebnis','candidates'=>['SPD'=>'Bernd Lynack','CDU'=>'Christopher Gedeon'] ]]);
     $previous = is_file($wahlabendCache) ? json_decode((string)file_get_contents($wahlabendCache), true) : [];
     $previousByKey = []; foreach (($previous['elections'] ?? []) as $item) $previousByKey[$item['key']] = $item;
     $multi = curl_multi_init(); $handles = []; $prepared = [];
@@ -234,7 +242,7 @@ try {
     $levelName = $isLocal ? 'Wahlbezirke im Ortsratsgebiet' : ($wahl === 'Landratswahl' ? 'Gemeinden im Landkreis' : ($county ? ($level === 'gemeinden' ? 'Gemeinden im Landkreis' : 'Kreiswahlbereiche') : 'Ortsteile'));
     echo json_encode(['year'=>'2016','wahl'=>$wahl,'metadata'=>$metadata,'rows'=>$rows,'total'=>$total,'level'=>$levelName,'areaLevel'=>$areaKind,'sources'=>$sources,'retrieved'=>$officialArchive['retrieved'],'archived'=>true,'resultStatus'=>'Amtliches Endergebnis vom 11.09.2016','splitAvailable'=>true], JSON_UNESCAPED_UNICODE); exit;
   }
-  $county = $wahl === 'Kreiswahl' || $wahl === 'Kreistagswahl' || $wahl === 'Landratswahl';
+  $county = $wahl === 'Kreiswahl' || $wahl === 'Kreistagswahl' || $wahl === 'Landratswahl' || $wahl === 'Stichwahl des Landrats';
   $authority = $county ? '03254000' : '03254021';
   $actual = $year === '2021' && in_array($wahl, ['Kreiswahl', 'Kreistagswahl'], true) ? 'Kreiswahl' : $wahl;
   if ($year === '2026' && str_starts_with($wahl, 'Ortsratswahl (')) {
@@ -267,9 +275,9 @@ try {
       if ($county && (str_contains($e,'kreis-ergebnis') || str_contains($e,'landkreis'))) $overall = $c;
       if (!$county && str_contains($e,'ortsteil')) $detail = $c;
     }
-    if ($county && $wahl !== 'Landratswahl' && $level === 'gemeinden' && str_contains($e,'gemeinde')) $detail = $c;
-    if ($county && $wahl !== 'Landratswahl' && $level !== 'gemeinden' && str_contains($e,'wahlbereich')) $detail = $c;
-    if ($wahl === 'Landratswahl' && str_contains($e,'gemeinde')) $detail = $c;
+    if ($county && !in_array($wahl, ['Landratswahl','Stichwahl des Landrats'], true) && $level === 'gemeinden' && str_contains($e,'gemeinde')) $detail = $c;
+    if ($county && !in_array($wahl, ['Landratswahl','Stichwahl des Landrats'], true) && $level !== 'gemeinden' && str_contains($e,'wahlbereich')) $detail = $c;
+    if (in_array($wahl, ['Landratswahl','Stichwahl des Landrats'], true) && str_contains($e,'gemeinde')) $detail = $c;
   }
   $tables = [];
   $selectedEntries = array_values(array_filter([$overall, $detail]));
@@ -290,7 +298,7 @@ try {
     curl_multi_close($singleMulti);
     if ($overall && empty($tables[$overall['ebene']])) {
       $fallbackPayload = is_file($wahlabendCache) ? json_decode((string)file_get_contents($wahlabendCache), true) : null;
-      $fallbackKey = $wahl === 'Landratswahl' ? 'landrat' : (in_array($wahl, ['Kreiswahl','Kreistagswahl'], true) ? 'kreistag' : ($wahl === 'Stadtratswahl' ? 'stadtrat' : ''));
+      $fallbackKey = $wahl === 'Stichwahl des Landrats' ? 'landrat-stichwahl' : ($wahl === 'Landratswahl' ? 'landrat' : (in_array($wahl, ['Kreiswahl','Kreistagswahl'], true) ? 'kreistag' : ($wahl === 'Stadtratswahl' ? 'stadtrat' : '')));
       $fallbackElection = null;
       foreach (($fallbackPayload['elections'] ?? []) as $cachedElection) if (($cachedElection['key'] ?? '') === $fallbackKey) { $fallbackElection = $cachedElection; break; }
       if ($fallbackElection) {
@@ -308,8 +316,9 @@ try {
     }
   }
   $rows = $detail ? ($tables[$detail['ebene']] ?? []) : []; $total = $overall ? (($tables[$overall['ebene']][0] ?? null)) : ($rows[0] ?? null); $metadata = $meta; foreach ($metadata['dateifelder'] as &$field) if (($field['name'] ?? '') === $actual) $field['name'] = $wahl;
-  $levelName = $detail ? ($isLocal ? 'Wahlbezirke im Ortsratsgebiet' : ($wahl === 'Landratswahl' ? 'Gemeinden im Landkreis' : ($county ? ($level === 'gemeinden' ? 'Gemeinden im Landkreis' : 'Kreiswahlbereiche') : ($year === '2026' ? 'Stadtwahlbereiche' : 'Ortsteile')))) : 'Wahlbezirke';
-  echo json_encode(['year'=>$year,'wahl'=>$wahl,'metadata'=>$metadata,'rows'=>$rows,'total'=>$total,'level'=>$levelName,'areaLevel'=>$wahl === 'Landratswahl' ? 'gemeinden' : ($county ? ($level === 'gemeinden' ? 'gemeinden' : 'wahlbereiche') : 'ortsteile'),'sources'=>array_values(array_filter([$overall ? $csvBase.$overall['url'] : null,$detail ? $csvBase.$detail['url'] : null])),'retrieved'=>date('d.m.Y H:i:s'),'archived'=>false], JSON_UNESCAPED_UNICODE);
+  $directCounty = in_array($wahl, ['Landratswahl','Stichwahl des Landrats'], true);
+  $levelName = $detail ? ($isLocal ? 'Wahlbezirke im Ortsratsgebiet' : ($directCounty ? 'Gemeinden im Landkreis' : ($county ? ($level === 'gemeinden' ? 'Gemeinden im Landkreis' : 'Kreiswahlbereiche') : ($year === '2026' ? 'Stadtwahlbereiche' : 'Ortsteile')))) : 'Wahlbezirke';
+  echo json_encode(['year'=>$year,'wahl'=>$wahl,'metadata'=>$metadata,'rows'=>$rows,'total'=>$total,'level'=>$levelName,'areaLevel'=>$directCounty ? 'gemeinden' : ($county ? ($level === 'gemeinden' ? 'gemeinden' : 'wahlbereiche') : 'ortsteile'),'sources'=>array_values(array_filter([$overall ? $csvBase.$overall['url'] : null,$detail ? $csvBase.$detail['url'] : null])),'retrieved'=>date('d.m.Y H:i:s'),'archived'=>false], JSON_UNESCAPED_UNICODE);
 } catch (Throwable $e) {
   if ($action === 'wahlabend' && is_file($wahlabendCache) && time() - (int)filemtime($wahlabendCache) < 600) {
     $cached = json_decode((string)@file_get_contents($wahlabendCache), true);

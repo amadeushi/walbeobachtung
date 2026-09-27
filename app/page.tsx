@@ -313,9 +313,9 @@ export default function Home() {
   }, [year]);
   const apiWahl =
     year === '2021' && wahl === 'Kreistagswahl' ? 'Kreiswahl' : wahl;
-  const county = wahl === 'Kreistagswahl' || wahl === 'Landratswahl';
+  const county = wahl === 'Kreistagswahl' || wahl === 'Landratswahl' || wahl === 'Stichwahl des Landrats';
   const isOrtsrat = wahl.startsWith('Ortsratswahl (');
-  const directElection = wahl === 'Bürgermeisterwahl' || wahl === 'Landratswahl';
+  const directElection = wahl === 'Bürgermeisterwahl' || wahl === 'Landratswahl' || wahl === 'Stichwahl des Landrats';
   const ready =
     data.year === year &&
     data.wahl === apiWahl &&
@@ -369,7 +369,7 @@ export default function Home() {
     setError('');
     setView(v === '2026' ? 'electionnight' : 'overview');
     setWahl((w) =>
-      (w === 'Bürgermeisterwahl' && v !== '2021') || (w === 'Landratswahl' && v === '2011')
+      (w === 'Bürgermeisterwahl' && v !== '2021') || (w === 'Landratswahl' && v === '2011') || (w === 'Stichwahl des Landrats' && v !== '2026')
           ? 'Stadtratswahl'
           : w,
     );
@@ -415,7 +415,7 @@ export default function Home() {
         </div>
         <span className="top-note">
           {projection && view === 'electionnight'
-            ? 'Kommunalwahlen · 2026 · Stadt und Landkreis Hildesheim'
+            ? 'Stichwahl Landrat · 27.09.2026 · Hildesheim'
             : `${wahl === 'Bürgermeisterwahl' ? 'Oberbürgermeisterwahl' : wahl} · ${year} · ${county ? 'Landkreis Hildesheim' : 'Hildesheim'}`}
         </span>
         <div className="screen-controls">
@@ -520,6 +520,9 @@ export default function Home() {
             },
             ...(['2016', '2021', '2026'].includes(year)
               ? [{ value: 'Landratswahl', label: 'Landratswahl' }]
+              : []),
+            ...(year === '2026'
+              ? [{ value: 'Stichwahl des Landrats', label: 'Stichwahl Landrat · 27.09.' }]
               : []),
             ...(year === '2021'
               ? [

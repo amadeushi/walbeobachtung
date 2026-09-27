@@ -1557,6 +1557,21 @@ footer a {
 .projection[data-view='electionnight'] .title-row {
   display: none;
 }
+.projection[data-view='electionnight'] .quote-carousel {
+  display: none;
+}
+.projection[data-view='electionnight'] .top-note { max-width: 32vw; font-size: clamp(10px,.8vw,13px); }
+.projection[data-view='electionnight'] .night-local .night-card { min-height: 0; padding: 8px 12px; }
+.projection[data-view='electionnight'] .night-local .night-competition,
+.projection[data-view='electionnight'] .night-local .night-mini-chart,
+.projection[data-view='electionnight'] .night-local .night-meta { display: none; }
+@media (min-width: 701px) and (max-height: 800px) {
+  .projection[data-view='electionnight'] .night-main .night-card { padding: 8px 12px; }
+  .projection[data-view='electionnight'] .night-main .night-top-three { gap: 2px; margin-top: 3px; padding-block: 3px; }
+  .projection[data-view='electionnight'] .night-main .night-meta { margin-top: 3px; }
+  .projection[data-view='electionnight'] .night-main .night-competition,
+  .projection[data-view='electionnight'] .night-main .night-mini-chart { margin-top: 3px; }
+}
 .projection[data-view='seats'] .filters,
 .projection[data-view='seats'] .notice,
 .projection[data-view='seats'] .dashboard,
@@ -1715,6 +1730,22 @@ footer a {
 .night-no-main { padding: 10px 14px; border: 1px dashed #cbd5df; border-radius: 8px; color: #66768a; background: #f8fafb; font-size: 12px; text-align: center; }
 .night-foot { color: #708094; font-size: 10px; text-align: center; }
 .night-warning { margin: -5px 0; color: #9b2a45; font-size: 11px; text-align: center; }
+.runoff-spotlight { display: grid; grid-template-columns: minmax(210px,.72fr) minmax(420px,1.7fr); gap: clamp(12px,1.2vw,22px); padding: clamp(12px,1vw,18px); border: 2px solid #0d6f83; border-radius: 10px; color: #f8fcfd; background: radial-gradient(circle at 88% 12%,rgb(82 192 199 / 24%),transparent 35%),linear-gradient(120deg,#092f43,#0d5267 58%,#12384c); box-shadow: 0 10px 28px rgb(9 47 67 / 20%); }
+.runoff-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.runoff-title span { display: flex; align-items: center; gap: 5px; color: #8ee3df; font-size: clamp(9px,.58vw,12px); font-weight: 850; letter-spacing: .08em; }
+.runoff-title span svg { width: 14px; height: 14px; }
+.runoff-title h3 { margin: 4px 0 1px; color: inherit; font-size: clamp(19px,1.4vw,28px); }
+.runoff-title p { margin: 0; color: #c1d8df; font-size: clamp(9px,.62vw,12px); }
+.runoff-title > strong { flex: none; color: #fff; font-size: clamp(20px,1.4vw,28px); text-align: right; font-variant-numeric: tabular-nums; }
+.runoff-title > strong small { display: block; color: #9fc1cc; font-size: 9px; font-weight: 650; text-transform: uppercase; }
+.runoff-candidates { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+.runoff-candidates > div { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 9px; min-width: 0; padding: 9px 11px; border-left: 5px solid var(--candidate-color); border-radius: 7px; background: rgb(255 255 255 / 10%); }
+.runoff-candidates span { color: #bad0d8; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.runoff-candidates b { overflow: hidden; color: #fff; font-size: clamp(13px,.9vw,18px); text-overflow: ellipsis; white-space: nowrap; }
+.runoff-candidates strong { grid-row: 1 / 3; grid-column: 3; color: #fff; font-size: clamp(22px,1.65vw,34px); font-variant-numeric: tabular-nums; }
+.runoff-candidates small { grid-column: 1 / 3; color: #c5d9df; font-size: 9px; }
+.runoff-progress { grid-column: 1 / -1; height: 4px; overflow: hidden; border-radius: 5px; background: rgb(255 255 255 / 15%); }
+.runoff-progress i { display: block; height: 100%; background: #75d9d3; transition: width .4s ease; }
 .night-loading { align-items: center; justify-content: center; color: #607087; }
 .night-loading svg { width: 24px; }
 .spin { animation: spin 1s linear infinite; }
@@ -1731,6 +1762,7 @@ footer a {
 :fullscreen .projection .view-switch [data-slot='tabs-trigger'] { min-height: 28px; padding-block: 4px; }
 :fullscreen .projection .election-night { gap: 5px; padding: 11px 14px; }
 :fullscreen .projection .night-ticker { min-height: 31px; }
+:fullscreen .projection .runoff-spotlight { padding-block: 8px; }
 :fullscreen .projection .night-head h2 { margin-block: 2px 0; font-size: clamp(25px, 1.7vw, 32px); }
 :fullscreen .projection .night-head p { display: none; }
 :fullscreen .projection .night-controls label { margin-bottom: 2px; }
@@ -1825,6 +1857,9 @@ footer a {
     flex-direction: column;
     gap: 14px;
   }
+  .runoff-spotlight { grid-template-columns: 1fr; }
+  .runoff-title { align-items: flex-start; }
+  .runoff-candidates { grid-template-columns: 1fr; }
   .night-controls {
     width: 100%;
   }
